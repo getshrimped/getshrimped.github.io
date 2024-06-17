@@ -1,33 +1,41 @@
 document.addEventListener('DOMContentLoaded', (event) => {
-    const logo = document.getElementById('bouncingLogo');
+
+  const logos = document.querySelectorAll('.bouncing-logo');
+
+  logos.forEach((logo, index) => {
     let xPos = Math.random() * (window.innerWidth - logo.clientWidth);
     let yPos = Math.random() * (window.innerHeight - logo.clientHeight);
+    let xSpeed = 6 + Math.random() * 2;
+    let ySpeed = 6 + Math.random() * 2;
 
-
-    let xSpeed = 6;
-    let ySpeed = 6;
-
-    if (window.innerWidth <= 600) {
-      xSpeed = 3;
-      ySpeed = 3;
+    if (window.innerWith <= 600) {
+      let xSpeed = 3 + Math.random() * 2;
+      let ySpeed = 3 + Math.random() * 2;
     }
+
+
 
     function updatePosition() {
-        xPos += xSpeed;
-        yPos += ySpeed;
+      xPos += xSpeed;
+      yPos += ySpeed;
 
-        if (xPos + logo.clientWidth >= window.innerWidth || xPos <= 0) {
-            xSpeed = -xSpeed;
-        }
-        if (yPos + logo.clientHeight >= window.innerHeight || yPos <= 0) {
-            ySpeed = -ySpeed;
-        }
+      if (xPos + logo.clientWidth >= window.innerWidth || xPos <= 0) {
+        xSpeed = -xSpeed;
+      }
+      if (yPos + logo.clientHeight >= window.innerHeight || yPos <= 0) {
+        ySpeed = -ySpeed;
+      }
 
-        logo.style.left = xPos + 'px';
-        logo.style.top = yPos + 'px';
+      logo.style.left = xPos + 'px';
+      logo.style.top = yPos + 'px';
 
-        requestAnimationFrame(updatePosition);
+      requestAnimationFrame(updatePosition);
     }
 
+    logo.style.position = 'absolute';
+    logo.style.left = xPos + 'px';
+    logo.style.top = yPos + 'px';
+
     updatePosition();
+  });
 });
