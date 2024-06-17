@@ -70,6 +70,26 @@ h1 {
   pointer-events: none; /* Allow clicks to pass through the images */
 }
 
+.rotate {
+  animation: rotation 2s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+/* Centered image styling */
+.centered-image {
+  max-width: 80%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
 /* Centered video styling */
 .centered-video {
   border: 5px solid #FF6F61; /* Deep Coral */
@@ -96,5 +116,9 @@ h1 {
 
   .bouncing-logo {
     width: 50px;
+  }
+
+  .centered-image {
+    max-width: 100%;
   }
 }

@@ -8,17 +8,18 @@
 </head>
 <body>
     <div class="container">
-        <video controls autoplay class="centered-video">
+        <video controls autoplay id="shrimped-video" class="centered-video">
             <source src="shrimped.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
-    <img src="shrimp.png" alt="Shrimped" class="bouncing-logo" id="bouncingLogo">
-    <img src="shrimp.png" alt="Shrimped" class="bouncing-logo" id="bouncingLogo">
-    <img src="shrimp.png" alt="Shrimped" class="bouncing-logo" id="bouncingLogo">
-    <img src="shrimp.png" alt="Shrimped" class="bouncing-logo" id="bouncingLogo">
-    <img src="shrimp.png" alt="Shrimped" class="bouncing-logo" id="bouncingLogo">
-    <img src="shrimp.png" alt="Shrimped" class="bouncing-logo" id="bouncingLogo">
+    <div id="shrimps-container">
+      <img src="shrimp.png" alt="Shrimped" class="bouncing-logo rotate">
+    </div>
     <script src="script.js"></script>
+
+    <script>
+      document.getElementById('shrimped-video').play();
+    </script>
 </body>
 </html>
