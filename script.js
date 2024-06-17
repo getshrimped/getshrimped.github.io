@@ -8,12 +8,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
     let xSpeed = 6 + Math.random() * 2;
     let ySpeed = 6 + Math.random() * 2;
 
-    if (window.innerWith <= 600) {
-      let xSpeed = 3 + Math.random() * 2;
-      let ySpeed = 3 + Math.random() * 2;
+    if (window.innerWidth <= 600) {
+      xSpeed = 3 + Math.random() * 2;
+      ySpeed = 3 + Math.random() * 2;
     }
-
-
 
     function updatePosition() {
       xPos += xSpeed;
