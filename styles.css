@@ -1,0 +1,99 @@
+/* Reset some default styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: #FFDDC1; /* Light Coral */
+    overflow: hidden; /* Prevents scrolling due to bouncing image */
+}
+
+/* Full screen container */
+.container {
+    text-align: center;
+}
+
+/* Big text styling */
+h1 {
+    font-size: 5rem;
+    color: #333333; /* Dark Gray */
+    margin-bottom: 20px;
+}
+
+/* Button container to handle button spacing */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Primary Button styling */
+.btn {
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    color: #FFF5E1; /* Light Cream */
+    background-color: #FF6F61; /* Deep Coral */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #E65A50; /* Darker shade of Deep Coral */
+}
+
+/* Secondary Button styling */
+.btn-secondary {
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    color: #333333; /* Dark Gray */
+    background-color: #FFF5E1; /* Light Cream */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #E6E0D1; /* Slightly darker shade of Light Cream */
+}
+
+/* Bouncing logo styling */
+.bouncing-logo {
+    position: absolute;
+    width: 100px;
+    height: auto;
+}
+
+/* Centered video styling */
+.centered-video {
+  border: 5px solid #FF6F61; /* Deep Coral */
+  border-radius: 10px;
+
+  position: absolute;
+  min-width: 60%;
+  min-height: 60%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  .btn, .btn-secondary {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+
+  .bouncing-logo {
+    width: 50px;
+  }
+}
